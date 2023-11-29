@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POE_PART_3", "POE_PART_3.csproj", "{D3DA9BF3-C41F-4C9A-B8B0-B98E308AD095}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuleClassLibrary", "..\ST10213212.ThakeerMoola.PROG6212_PART_1\ModuleClassLibrary\ModuleClassLibrary.csproj", "{D4DCF743-E660-4FC0-86A4-C0ED3D19E895}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D3DA9BF3-C41F-4C9A-B8B0-B98E308AD095}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3DA9BF3-C41F-4C9A-B8B0-B98E308AD095}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3DA9BF3-C41F-4C9A-B8B0-B98E308AD095}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3DA9BF3-C41F-4C9A-B8B0-B98E308AD095}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4DCF743-E660-4FC0-86A4-C0ED3D19E895}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4DCF743-E660-4FC0-86A4-C0ED3D19E895}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4DCF743-E660-4FC0-86A4-C0ED3D19E895}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4DCF743-E660-4FC0-86A4-C0ED3D19E895}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {973D7F0B-2B86-4ABC-95BD-C7FE9B10236F}
+	EndGlobalSection
+EndGlobal

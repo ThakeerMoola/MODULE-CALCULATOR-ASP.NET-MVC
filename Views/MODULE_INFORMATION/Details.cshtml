@@ -1,0 +1,68 @@
+﻿@model part3.Models.MODULE_INFORMATION
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MODULE_INFORMATION</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MODUL_NAME)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MODUL_NAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CREDITS)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CREDITS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CLASS_HOURS)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CLASS_HOURS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NUMBER_OF_WEEKS)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NUMBER_OF_WEEKS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HOURS_SPENT)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HOURS_SPENT)
+        </dd>
+
+        <!-- Add START_DATE and END_DATE -->
+        <dt>
+            @Html.DisplayNameFor(model => model.START_DATE)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.START_DATE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.END_DATE)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.END_DATE)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MODULE_CODE }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

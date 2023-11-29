@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="MODULE_INFORMATIONModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="MODULE_INFORMATION">
+          <Key>
+            <PropertyRef Name="MODULE CODE" />
+          </Key>
+          <Property Name="MODULE CODE" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="MODUL NAME" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CREDITS" Type="int" Nullable="false" />
+          <Property Name="CLASS HOURS" Type="int" Nullable="false" />
+          <Property Name="NUMBER OF WEEKS" Type="int" Nullable="false" />
+          <Property Name="HOURS SPENT" Type="int" Nullable="false" />
+          <Property Name="PlannedDayOfWeek" Type="int" />
+          <Property Name="START_DATE" Type="datetime" />
+          <Property Name="END_DATE" Type="datetime" />
+        </EntityType>
+        <EntityContainer Name="MODULE_INFORMATIONModelStoreContainer">
+          <EntitySet Name="MODULE_INFORMATION" EntityType="Self.MODULE_INFORMATION" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MODULE_INFORMATIONModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="MODULE_INFORMATION">
+          <Key>
+            <PropertyRef Name="MODULE_CODE" />
+          </Key>
+          <Property Name="MODULE_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MODUL_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CREDITS" Type="Int32" Nullable="false" />
+          <Property Name="CLASS_HOURS" Type="Int32" Nullable="false" />
+          <Property Name="NUMBER_OF_WEEKS" Type="Int32" Nullable="false" />
+          <Property Name="HOURS_SPENT" Type="Int32" Nullable="false" />
+          <Property Name="PlannedDayOfWeek" Type="Int32" />
+          <Property Name="START_DATE" Type="DateTime" Precision="3" />
+          <Property Name="END_DATE" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="MODULE_INFORMATIONEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="MODULE_INFORMATION" EntityType="Self.MODULE_INFORMATION" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MODULE_INFORMATIONModelStoreContainer" CdmEntityContainer="MODULE_INFORMATIONEntities1">
+          <EntitySetMapping Name="MODULE_INFORMATION">
+            <EntityTypeMapping TypeName="MODULE_INFORMATIONModel.MODULE_INFORMATION">
+              <MappingFragment StoreEntitySet="MODULE_INFORMATION">
+                <ScalarProperty Name="END_DATE" ColumnName="END_DATE" />
+                <ScalarProperty Name="START_DATE" ColumnName="START_DATE" />
+                <ScalarProperty Name="PlannedDayOfWeek" ColumnName="PlannedDayOfWeek" />
+                <ScalarProperty Name="HOURS_SPENT" ColumnName="HOURS SPENT" />
+                <ScalarProperty Name="MODULE_CODE" ColumnName="MODULE CODE" />
+                <ScalarProperty Name="MODUL_NAME" ColumnName="MODUL NAME" />
+                <ScalarProperty Name="CREDITS" ColumnName="CREDITS" />
+                <ScalarProperty Name="CLASS_HOURS" ColumnName="CLASS HOURS" />
+                <ScalarProperty Name="NUMBER_OF_WEEKS" ColumnName="NUMBER OF WEEKS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

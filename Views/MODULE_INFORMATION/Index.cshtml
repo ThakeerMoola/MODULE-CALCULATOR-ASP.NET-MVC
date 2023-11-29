@@ -1,0 +1,72 @@
+﻿<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZwT" crossorigin="anonymous">
+
+@model IEnumerable<part3.Models.MODULE_INFORMATION>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Modules</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-success", style = "color: #FFFFFF;" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MODUL_NAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CREDITS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CLASS_HOURS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NUMBER_OF_WEEKS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HOURS_SPENT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.START_DATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.END_DATE)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MODUL_NAME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CREDITS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CLASS_HOURS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NUMBER_OF_WEEKS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HOURS_SPENT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.START_DATE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.END_DATE)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.MODULE_CODE }, new { @class = "btn btn-primary", style = "color: #FFFFFF;" }) |
+                @Html.ActionLink("Details", "Details", new { id = item.MODULE_CODE }, new { @class = "btn btn-info", style = "color: #FFFFFF;" }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.MODULE_CODE }, new { @class = "btn btn-danger", style = "color: #FFFFFF;" })
+            </td>
+        </tr>
+    }
+</table>
